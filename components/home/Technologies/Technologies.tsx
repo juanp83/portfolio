@@ -1,5 +1,4 @@
 import {
-    createStyles,
     Title,
     Text,
     Card,
@@ -7,6 +6,7 @@ import {
     Container,
     Image,
   } from '@mantine/core';
+import classes from './Technologies.module.css'
   
   const technologies = [
     {
@@ -53,87 +53,30 @@ import {
     },
   ];
   
-  const useStyles = createStyles((theme) => ({
-    title: {
-      fontSize: 34,
-      fontWeight: 900,
-      color: '#fff',
-      [theme.fn.smallerThan('sm')]: {
-        fontSize: 24,
-      },
-    },
-  
-    description: {
-      maxWidth: 600,
-      margin: 'auto',
-      color: '#fff',
-      '&::after': {
-        content: '""',
-        display: 'block',
-        backgroundColor: theme.fn.primaryColor(),
-        width: 45,
-        height: 2,
-        marginTop: theme.spacing.sm,
-        marginLeft: 'auto',
-        marginRight: 'auto',
-      },
-    },
-  
-    card: {
-      border: `1px solid ${
-        theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1]
-      }`,
-    },
-  
-    cardTitle: {
-      '&::after': {
-        content: '""',
-        display: 'block',
-        backgroundColor: theme.fn.primaryColor(),
-        width: 45,
-        height: 2,
-        marginTop: theme.spacing.sm,
-      },
-    },
-
-    container: {
-        marginTop:  theme.spacing.xl * 4,
-        marginBottom:  theme.spacing.xl * 4,
-        [theme.fn.smallerThan('md')]: {
-          marginTop:  theme.spacing.xl * 2,
-          marginBottom:  theme.spacing.xl * 2,
-        },
-    }
-  }));
-  
   export default function Technologies() {
-    const { classes, theme } = useStyles();
     const features = technologies.map((feature) => (
       <Card key={feature.title} shadow="md" radius="md" className={classes.card} p="xl">
         <div style={{ display: 'flex' }}>
-            <Image src={feature.icon.src} width={50} style={{marginRight: '.5em'}} alt={feature.icon.alt} />
-            <Image src={feature.icon2.src} width={50} alt={feature.icon.alt} />
+            <Image className={classes.icon} src={feature.icon.src} style={{marginRight: '.5em'}} alt={feature.icon.alt} />
+            <Image className={classes.icon} src={feature.icon2.src} alt={feature.icon.alt} />
         </div>
-        <Text size="lg" weight={500} className={classes.cardTitle} mt="md">
+        <Text size="lg" className={classes.cardTitle} mt="md">
           {feature.title}
         </Text>
-        {/* <Text size="sm" color="dimmed" mt="sm">
-          {feature.description}
-        </Text> */}
       </Card>
     ));
     return (
       <Container size="lg" py="xl" className={classes.container}>
   
-        <Title order={2} className={classes.title} align="center" mt="sm">
+        <Title order={2} className={classes.title} mt="sm">
           My bread and butter
         </Title>
   
-        <Text color="dimmed" className={classes.description} align="center" mt="md">
-           I have experience in (and lots of love for) the following technologies.
+        <Text className={classes.description} mt="md">
+           I have expertise in (and lots of love for) the following technologies.
         </Text>
   
-        <SimpleGrid cols={3} spacing="xl" mt={50} breakpoints={[{ maxWidth: 'sm', cols: 1 }, { maxWidth: 'md', cols: 2 }]}>
+        <SimpleGrid cols={3} spacing="xl" mt={50}>
           {features}
         </SimpleGrid>
       </Container>

@@ -8,9 +8,7 @@ export default function Document() {
       <Head>
         <ColorSchemeScript />
       </Head>
-      <body style={{ 
-            background: 'linear-gradient(315deg, rgba(54,89,129,1) 0%, rgba(103,171,249,1) 100%)'
-          }}>
+      <body>
         <Main />
         <NextScript />
       </body>

@@ -12,7 +12,7 @@ import classes from './Hero.module.css';
 
 export default function Hero() {
   return (
-    <Container>
+    <Container style={{ paddingTop: '120px'}}>
       <div className={classes.inner}>
         <div className={classes.content}>
           <Title className={classes.title}>
@@ -25,7 +25,7 @@ export default function Hero() {
               Ironically, I started my career in recruiting and HR. <span style={{ fontSize: 26 }}>🤦‍♂️</span>
           </Text> 
           <Text mt="md">
-              Learning to code made me realize that I could merge my people focused work with my interest in tech.
+              After learning to code, I realized that I could merge my people focused work with my interest in tech.
               I enjoy working in a team, designing simple, elegant, responsive, and user friendly interfaces that bridge the gap between people and technology.
           </Text> 
 

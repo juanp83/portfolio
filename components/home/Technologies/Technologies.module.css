@@ -1,0 +1,38 @@
+.title {
+    font-size: 34px;
+    font-weight: 900;
+    color: #fff;
+    text-align: center;
+    @media (max-width: var(--mantine-breakpoint-xs)) {
+        font-size: 24;
+    }
+}
+
+.card {
+    border: 1px solid var(--mantine-color-gray-0);
+}
+
+.cardTitle::after {
+    content: '';
+    display: block;
+    width: 45px;
+    margin-top: var(--mantine-spacimg-sm);
+}
+
+.container {
+    margin-top: 100px;
+    margin-bottom:  var(--mantine-spacimg-xl);
+    @media (max-width: var(--mantine-breakpoint-sm)) {
+        margin-top: var(--mantine-spacimg-xl);
+        margin-bottom: var(--mantine-spacimg-xl);
+    }
+}
+
+.icon {
+    width: 50px;
+}
+
+.description {
+    color: var(--mantine-color-white);
+    text-align: center;
+}
