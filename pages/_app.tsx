@@ -6,7 +6,6 @@ import { theme } from "../theme";
 
 const links = [
   {link: '/', label: 'Home'},
-  // {link: '/blog', label: 'Blog'},
   {link: '/resume', label: 'Resume'}
 ]
 
