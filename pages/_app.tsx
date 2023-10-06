@@ -1,7 +1,14 @@
 import "@mantine/core/styles.css";
 import Head from "next/head";
 import { MantineProvider } from "@mantine/core";
+import SimpleHeader from '../components/SimpleHeader/SimpleHeader';
 import { theme } from "../theme";
+
+const links = [
+  {link: '/', label: 'Home'},
+  // {link: '/blog', label: 'Blog'},
+  {link: '/resume', label: 'Resume'}
+]
 
 export default function App({ Component, pageProps }: any) {
   return (
@@ -14,6 +21,7 @@ export default function App({ Component, pageProps }: any) {
         />
         <link rel="shortcut icon" href="/favicon.svg" />
       </Head>
+      <SimpleHeader links={links} />
       <Component {...pageProps} />
     </MantineProvider>
   );
