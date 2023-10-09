@@ -40,11 +40,6 @@ export function FooterSocial() {
       <Container className={classes.inner}>
         <Title order={1}>Juan Portillo</Title>
         <Group spacing={0} className={classes.links} position="right" noWrap>
-          <a href="https://twitter.com/JuanPDev" target="_blank" rel="noreferrer">
-            <ActionIcon size="lg">
-              <IconBrandTwitter size={18} stroke={1.5} />
-            </ActionIcon>
-          </a>
           <a href="https://www.linkedin.com/in/juanportillo/" target="_blank" rel="noreferrer">
             <ActionIcon size="lg">
               <IconBrandLinkedin size={18} stroke={1.5} />

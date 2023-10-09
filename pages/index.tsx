@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Hero from '../components/home/Hero/Hero'
-import Projects from '../components/home/Projects'
+import Projects from '../components/home/Projects/Projects'
 import Technologies from '../components/home/Technologies/Technologies'
 
 export default function IndexPage() {
@@ -13,7 +13,7 @@ export default function IndexPage() {
       </Head>
       <Hero />
       <Technologies />
-      {/* <Projects /> */}
+      <Projects />
     </div>
   );
 }

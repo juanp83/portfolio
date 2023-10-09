@@ -1,6 +1,5 @@
 import {
     Button,
-    createStyles,
     Title,
     Text,
     Card,
@@ -9,6 +8,7 @@ import {
     Image,
   } from '@mantine/core';
 import Link from 'next/link';
+import classes from './Projects.module.css'
   
   const projects = {
         professional: [
@@ -44,76 +44,11 @@ import Link from 'next/link';
         ]
     }
   
-  const useStyles = createStyles((theme) => ({
-    title: {
-      fontSize: 34,
-      fontWeight: 900,
-      color: '#fff',
-      [theme.fn.smallerThan('sm')]: {
-        fontSize: 24,
-      },
-    },
-    subTitle: {
-      fontSize: 26,
-      fontWeight: 700,
-      color: '#fff',
-      [theme.fn.smallerThan('sm')]: {
-        fontSize: 20,
-      },
-    },
-  
-    description: {
-      maxWidth: 600,
-      margin: 'auto',
-  
-      '&::after': {
-        content: '""',
-        display: 'block',
-        backgroundColor: theme.fn.primaryColor(),
-        width: 45,
-        height: 2,
-        marginTop: theme.spacing.sm,
-        marginLeft: 'auto',
-        marginRight: 'auto',
-      },
-    },
-  
-    card: {
-      border: `1px solid ${
-        theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1]
-      }`,
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'space-between'
-    },
-  
-    cardTitle: {
-      '&::after': {
-        content: '""',
-        display: 'block',
-        backgroundColor: theme.fn.primaryColor(),
-        width: 45,
-        height: 2,
-        marginTop: theme.spacing.sm,
-      },
-    },
-
-    container: {
-        marginTop:  theme.spacing.xl * 4,
-        marginBottom:  theme.spacing.xl * 4,
-        [theme.fn.smallerThan('md')]: {
-          marginTop:  theme.spacing.xl * 2,
-          marginBottom:  theme.spacing.xl * 2,
-        },
-    }
-  }));
-  
   export default function Projects() {
-    const { classes, theme } = useStyles();
     const professionalProjects = projects.professional.map((project) => (
       <Card key={project.title} shadow="md" radius="md" className={classes.card} p="xl">
         <div>
-          <Text size="lg" weight={500} className={classes.cardTitle} mt="md">
+          <Text size="lg"  className={classes.cardTitle} mt="md">
             {project.title}
           </Text>
           <Text size="sm" mt="sm">
@@ -132,7 +67,7 @@ import Link from 'next/link';
     ));
     const personalProjects = projects.personal.map((project) => (
       <Card key={project.title} shadow="md" radius="md" className={classes.card} p="xl">
-        <Text size="lg" weight={500} className={classes.cardTitle} mt="md">
+        <Text size="lg" className={classes.cardTitle} mt="md">
           {project.title}
         </Text>
         <Text size="sm" mt="sm">
@@ -143,15 +78,15 @@ import Link from 'next/link';
     return (
       <Container size="lg" py="xl" className={classes.container}>
   
-        <Title order={2} className={classes.title} align="center" mt="sm">
+        <Title order={2} className={classes.title} mt="sm">
           Projects
         </Title>
 
-        <Title order={2} className={classes.subTitle} align="left" mt="sm">
+        <Title order={2} className={classes.subTitle} mt="sm">
           Professional
         </Title>
   
-        <SimpleGrid cols={3} spacing="xl" mt={25} mb={50}  breakpoints={[{ maxWidth: 'sm', cols: 1 }, { maxWidth: 'md', cols: 2 }]}>
+        <SimpleGrid cols={3} spacing="xl" mt={25} mb={50}>
           {professionalProjects}
         </SimpleGrid>
         {/* <Title order={2} className={classes.subTitle} align="left" mt="sm">
