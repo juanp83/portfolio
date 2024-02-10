@@ -29,7 +29,7 @@ import classes from './Projects.module.css'
             {
               title: 'Discovery Genie Website',
               url: 'https://www.discoverygenie.com',
-              description: 'The Discovery Genie website is the entry point for users. This website is where all Discovery Genie marketing efforts point. Within the website users are able to schedule a demo of the app, sign up, and learn everything they need to know to decide whether Discovery Genie is a goot fit for their practice.',
+              description: 'The Discovery Genie website is the entry point for users. This website is where all Discovery Genie marketing efforts point. Within the website users are able to schedule a demo of the app, sign up, and learn everything they need to know to decide whether Discovery Genie is a good fit for their practice.',
               // image: {src: '/icons/js-icon.png', alt: 'Javascript Icon'},
             },
         ],

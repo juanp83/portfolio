@@ -10,56 +10,6 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import classes from './SimpleHeader.module.css';
 
-// const useStyles = createStyles((theme) => ({
-//   header: {
-//     marginBottom:  theme.spacing.xl * 4,
-//     [theme.fn.smallerThan('md')]: {
-//       marginBottom:  theme.spacing.xl * 2,
-//     },
-//   },
-
-//   headerContainer: {
-//     display: 'flex',
-//     justifyContent: 'space-between',
-//     alignItems: 'center',
-//     height: '100%',
-//   },
-
-//   links: {
-//     [theme.fn.smallerThan('xs')]: {
-//       display: 'none',
-//     },
-//   },
-
-//   burger: {
-//     [theme.fn.largerThan('xs')]: {
-//       display: 'none',
-//     },
-//   },
-
-//   link: {
-//     display: 'block',
-//     lineHeight: 1,
-//     padding: '8px 12px',
-//     borderRadius: theme.radius.sm,
-//     textDecoration: 'none',
-//     color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
-//     fontSize: theme.fontSizes.sm,
-//     fontWeight: 500,
-
-//     '&:hover': {
-//       backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
-//     },
-//   },
-
-//   linkActive: {
-//     '&, &:hover': {
-//       backgroundColor: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).background,
-//       color: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).color,
-//     },
-//   },
-// }));
-
 interface SimpleHeaderProps {
     links: { link: string; label: string }[];
 }
@@ -79,10 +29,6 @@ export default function SimpleHeader({ links }: SimpleHeaderProps) {
       href={link.link}
       className={classes.link}
       data-active={active === link.link || undefined}
-      onClick={(event) => {
-        event.preventDefault();
-        setActive(link.link);
-      }}
     >
         {link.label}
     </Link>

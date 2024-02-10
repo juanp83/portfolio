@@ -3,6 +3,7 @@ import Head from "next/head";
 import { MantineProvider } from "@mantine/core";
 import SimpleHeader from '../components/SimpleHeader/SimpleHeader';
 import { theme } from "../theme";
+import { Footer } from "../components/Footer/Footer";
 
 const links = [
   {link: '/', label: 'Home'},
@@ -22,6 +23,7 @@ export default function App({ Component, pageProps }: any) {
       </Head>
       <SimpleHeader links={links} />
       <Component {...pageProps} />
+      <Footer />
     </MantineProvider>
   );
 }

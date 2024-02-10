@@ -51,10 +51,10 @@
 }
 
 .container {
-    margin-top:  var(--mantine-spacing-xl);
-    margin-bottom:  var(--mantine-spacing-xl);
+    margin-top:  100px;
+    padding-bottom: var(--mantine-spacing-xl);
     @media (max-width: var(--mantine-breakpoint-sm)) {
         margin-top: var(--mantine-spacing-xl);
-        margin-bottom: var(--mantine-spacing-xl);
+        padding-bottom: var(--mantine-spacing-xl);
     }
 }

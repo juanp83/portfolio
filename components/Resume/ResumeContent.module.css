@@ -1,0 +1,41 @@
+.container {
+    padding-top: var(--mantine-spacing-xl);
+    padding-bottom: var(--mantine-spacing-xl);
+}
+
+.contentContainer {
+    padding: 4em;
+    /* [theme.fn.smallerThan('md')]: {
+      padding: '1em';
+    } */
+}
+
+.paper {
+    position: relative;
+}
+
+.print {
+    position: absolute;
+    right: 5;
+    top: 5;
+    color: #4877ad;
+}
+  
+.indent { 
+    margin-left: 2em;
+    /* [theme.fn.smallerThan('md')]: {
+        marginLeft: '1em';
+    } */
+}
+
+.jobList { 
+    margin-left: 2em;
+    /* [theme.fn.smallerThan('md')]: {
+        marginLeft: '1em';
+    } */
+}
+
+.section {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}

@@ -1,0 +1,27 @@
+.footer {
+    border-top: 1px solid var(--mantine-color-gray-2);
+    background-color: #fff;
+    @media (max-width: var(--mantine-breakpoint-sm)) {
+        margin-top: var(--mantine-spacing-xl);
+    }
+    @mixin dark {
+        border-top: 1px solid var(--mantine-color-black-0);
+    }
+}
+
+.inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--mantine-spacing-sm);
+    padding-bottom: var(--mantine-spacing-sm);
+    @media (max-width: var(--mantine-breakpoint-xs)) {
+        flex-direction: column;
+    }
+}
+
+.links {
+    @media (max-width: var(--mantine-breakpoint-xs)) {
+        margin-top: var(--mantine-spacing-md);
+    }
+}
