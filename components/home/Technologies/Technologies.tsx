@@ -62,14 +62,15 @@ const breadAndButter = [
         </Text>
         <Paper p='xl' style={{ maxWidth: '788px', margin: '0 auto' }}>
           <Grid>
-            <Grid.Col span={4}>
+            <Grid.Col span={{ xs: 6, sm: 4 }}>
               State Management 
                 <List 
                   spacing="xs"
                   size="sm"
+                  mt={10}
                   icon={
-                    <ThemeIcon color="teal" size={24} radius="xl">
-                      <IconCircleCheck style={{ width: rem(16), height: rem(16) }} />
+                    <ThemeIcon color="#228be6" size={22} radius="xl">
+                      <IconCircleCheck style={{ width: rem(14), height: rem(14) }} />
                     </ThemeIcon>
                   }
                   withPadding 
@@ -79,14 +80,15 @@ const breadAndButter = [
                   <ListItem>Sagas</ListItem>
                 </List>
             </Grid.Col>
-            <Grid.Col span={4}>
+            <Grid.Col span={{ xs: 6, sm: 4 }}>
               Styling 
                 <List
                   spacing="xs"
                   size="sm"
+                  mt={10}
                   icon={
-                    <ThemeIcon color="teal" size={24} radius="xl">
-                      <IconCircleCheck style={{ width: rem(16), height: rem(16) }} />
+                    <ThemeIcon color="#228be6" size={22} radius="xl">
+                      <IconCircleCheck style={{ width: rem(14), height: rem(14) }} />
                     </ThemeIcon>
                   }
                   withPadding
@@ -96,52 +98,53 @@ const breadAndButter = [
                   <ListItem>SASS</ListItem>
                 </List>
             </Grid.Col>
-            <Grid.Col span={4}>
+            <Grid.Col span={{ xs: 6, sm: 4 }}>
               UI Libraries 
                 <List 
                   spacing="xs"
                   size="sm"
+                  mt={10}
                   icon={
-                    <ThemeIcon color="teal" size={24} radius="xl">
-                      <IconCircleCheck style={{ width: rem(16), height: rem(16) }} />
+                    <ThemeIcon color="#228be6" size={22} radius="xl">
+                      <IconCircleCheck style={{ width: rem(14), height: rem(14) }} />
                     </ThemeIcon>
                   }
                   withPadding
                 >
                   <ListItem>Material UI</ListItem>
-                  <ListItem>MUI Data Grid</ListItem>
                   <ListItem>Bootstrap</ListItem>
                   <ListItem>Mantine</ListItem>
                 </List>
             </Grid.Col>
-            <Grid.Col span={4}>
+            <Grid.Col span={{ xs: 6, sm: 4 }}>
               Project Management 
                 <List 
                   spacing="xs"
                   size="sm"
+                  mt={10}
                   icon={
-                    <ThemeIcon color="teal" size={24} radius="xl">
-                      <IconCircleCheck style={{ width: rem(16), height: rem(16) }} />
+                    <ThemeIcon color="#228be6" size={22} radius="xl">
+                      <IconCircleCheck style={{ width: rem(14), height: rem(14) }} />
                     </ThemeIcon>
                   }
                   withPadding
                 >
                   <ListItem>Toggl</ListItem>
                   <ListItem>Jira</ListItem>
-                  <ListItem>Trello</ListItem>
                   <ListItem>Github</ListItem>
                 </List>
             </Grid.Col>
-            <Grid.Col span={4}>
+            <Grid.Col span={{ xs: 6, sm: 4 }}>
               Design 
                 <List 
                    spacing="xs"
                    size="sm"
+                   mt={10}
                    icon={
-                     <ThemeIcon color="teal" size={24} radius="xl">
-                       <IconCircleCheck style={{ width: rem(16), height: rem(16) }} />
-                     </ThemeIcon>
-                   }
+                    <ThemeIcon color="#228be6" size={22} radius="xl">
+                      <IconCircleCheck style={{ width: rem(14), height: rem(14) }} />
+                    </ThemeIcon>
+                  }
                    withPadding
                 >
                   <ListItem>Figma</ListItem>
@@ -149,16 +152,17 @@ const breadAndButter = [
                   <ListItem>Photoshop</ListItem>
                 </List>
             </Grid.Col>
-            <Grid.Col span={4}>
+            <Grid.Col span={{ xs: 6, sm: 4 }}>
                 Testing 
                   <List
                     spacing="xs"
                     size="sm"
+                    mt={10}
                     icon={
-                      <ThemeIcon color="teal" size={24} radius="xl">
+                      <ThemeIcon color="#228be6" size={22} radius="xl">
                         <IconCircleCheck style={{ width: rem(16), height: rem(16) }} />
                       </ThemeIcon>
-                    } 
+                    }
                     withPadding
                   >
                     <ListItem>React Testing Library</ListItem>

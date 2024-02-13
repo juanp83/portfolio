@@ -12,10 +12,11 @@ import classes from './Projects.module.css'
   
   const projects = {
         professional: [
+            
             {
               title: 'Discovery Genie App',
               url: 'https://app.discoverygenie.com',
-              description: 'Discovery Genie is a cloud-native SaaS platform aimed at lawyers and paralegals involved in litigation. The web application allows litigation professionals to produce and index electronic documents and email archives for discovery with maximum efficiency and minimum expense.',
+              description: 'Discovery Genie is a cloud-native SaaS platform for lawyers and paralegals involved in litigation. The web application allows litigation professionals to produce and index electronic documents and email archives for discovery with maximum efficiency and minimum expense.',
               technologies: 'Typescript, React, React Router, Material UI, Emotion, React Hook Form, React Testing Library, Stripe',
               // image: {src: '/icons/js-icon.png', alt: 'Javascript Icon'},
             },
@@ -55,14 +56,17 @@ import classes from './Projects.module.css'
             {project.description}
           </Text>
         </div>
-        {/* <Link
-          href={`/resume`}
+        {project.url && (
+          <Link
+          href={project.url!}
           passHref
+          target='_blank'
+          style={{ marginTop: '1em'}}
         >
-          <Button radius="xl" size="md" mt={25}>
-            Learn More
-          </Button>
-        </Link> */}
+          <Button>Go To Site</Button>
+        </Link>
+        )}
+        
       </Card>
     ));
     const personalProjects = projects.personal.map((project) => (
@@ -86,7 +90,7 @@ import classes from './Projects.module.css'
           Professional
         </Title>
   
-        <SimpleGrid cols={3} spacing="xl" mt={25} mb={50}>
+        <SimpleGrid cols={{xs: 1, md: 3}} spacing="xl" mt={25} mb={50}>
           {professionalProjects}
         </SimpleGrid>
         {/* <Title order={2} className={classes.subTitle} align="left" mt="sm">

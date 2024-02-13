@@ -1,12 +1,12 @@
 import { ActionIcon, Box, Container, Divider, Flex, List, Paper, Text, Title } from '@mantine/core'
-import { IconPrinter } from '@tabler/icons';
+import { IconPrinter } from '@tabler/icons-react';
 import classes from './ResumeContent.module.css'
 
 const jobs = [
     {
         company: "Discovery Genie",
         title: "Frontend Software Engineer",
-        dates: "December 2017 - August 2023",
+        dates: "December 2017 - Present",
         technologies: "Typescript, React, Redux, Material UI, Emotion, React Testing Library, Stripe",
         duties: [
             "Developed the front-end for Discovery Genie v2, utilizing React, GraphQL, and Typescript to enhance user experience, improve performance, and ensure codebase scalability.",
@@ -84,7 +84,7 @@ export default function ResumeContent() {
                 size="lg"
                 className={classes.print}
                 variant="transparent"
-                onClick={() => window.open('/Juan Portillo - Front-end Software Engineer v2.pdf')}
+                onClick={() => window.open('/Juan Portillo Resume.pdf')}
             >
                 <IconPrinter size={26} />
             </ActionIcon>

@@ -5,9 +5,12 @@
 
 .contentContainer {
     padding: 4em;
-    /* [theme.fn.smallerThan('md')]: {
-      padding: '1em';
-    } */
+    @media (max-width: 63em) {
+        padding: 1em;
+    }
+    @media (max-width: 36em) {
+        padding: 0.5em;
+    }
 }
 
 .paper {
@@ -23,16 +26,22 @@
   
 .indent { 
     margin-left: 2em;
-    /* [theme.fn.smallerThan('md')]: {
-        marginLeft: '1em';
-    } */
+    @media (max-width: 63em) {
+        margin-left: 1em;
+    }
+    @media (max-width: 36em) {
+        margin-left: 0.5em;
+    }
 }
 
 .jobList { 
     margin-left: 2em;
-    /* [theme.fn.smallerThan('md')]: {
-        marginLeft: '1em';
-    } */
+    @media (max-width: 63em) {
+        margin-left: 1em;
+    }
+    @media (max-width: 36em) {
+        margin-left: 0.5em;
+    }
 }
 
 .section {
